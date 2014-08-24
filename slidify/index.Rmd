@@ -1,6 +1,7 @@
 ---
 title       : Effect of Diet on Weight
 subtitle    : Coursera Developing Data Products
+---
 
 ## What do you feed to chicks to maximize their growth?
 
