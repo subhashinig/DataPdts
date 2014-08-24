@@ -1,16 +1,7 @@
+install.packages("knitr")
 ---
 title       : Effect of Diet on Weight
 subtitle    : Coursera Developing Data Products
-author      : Andy Chu
-job         : 
-framework   : io2012   # {io2012, html5slides, shower, dzslides, ...}
-highlighter : highlight.js  # {highlight.js, prettify, highlight}
-hitheme     : tomorrow
-widgets     : []            # {mathjax, quiz, bootstrap}
-mode        : selfcontained # {standalone, draft}
-knit        : slidify::knit2slides
-
---- .class #id
 
 ## What do you feed to chicks to maximize their growth?
 
@@ -26,7 +17,7 @@ However, how do we find out which diet was best from the resulting measurments?
 
 It is difficult to determine which diet is best when looking at the weights of all the chicks at 20 days old.
 
-<img src="assets/fig/unnamed-chunk-1.png" title="plot of chunk unnamed-chunk-1" alt="plot of chunk unnamed-chunk-1" style="display: block; margin: auto;" />
+<img src="figure/unnamed-chunk-1.png" title="plot of chunk unnamed-chunk-1" alt="plot of chunk unnamed-chunk-1" style="display: block; margin: auto;" />
 
 What about on different days? Is one diet better than another when looking at different timelines?
 
@@ -36,7 +27,7 @@ What about on different days? Is one diet better than another when looking at di
 
 You can compare between diets, and even check the weights at different days
 
-<img src="assets/fig/unnamed-chunk-2.png" title="plot of chunk unnamed-chunk-2" alt="plot of chunk unnamed-chunk-2" style="display: block; margin: auto;" />
+<img src="figure/unnamed-chunk-2.png" title="plot of chunk unnamed-chunk-2" alt="plot of chunk unnamed-chunk-2" style="display: block; margin: auto;" />
 Diet 4 yields significantly bigger chicks as of 6 days of age, but by 20 days, that difference is gone!
 
 ---
@@ -45,4 +36,4 @@ Diet 4 yields significantly bigger chicks as of 6 days of age, but by 20 days, t
 
 Explore the comparisons between different diets on different days yourself!
 
-Go to http://courseraandy.shinyapps.io/shiny/ right now!
+

@@ -1,143 +1,186 @@
 <!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
 <html>
 <head>
-  <title>Effect of Diet on Weight</title>
-  <meta charset="utf-8">
-  <meta name="description" content="Effect of Diet on Weight">
-  <meta name="author" content="Andy Chu">
-  <meta name="generator" content="slidify" />
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta http-equiv="X-UA-Compatible" content="chrome=1">
-  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
-  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
-    media="only screen and (max-device-width: 480px)" >
-  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
-  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
-  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  
-  
-  <!-- Grab CDN jQuery, fall back to local if offline -->
-  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
-  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
-  <script data-main="libraries/frameworks/io2012/js/slides" 
-    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
-  </script>
-  
-  
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=9" >
+
+<title>install.packages(&ldquo;knitr&rdquo;)</title>
+
+<style type="text/css">
+body, td {
+   font-family: sans-serif;
+   background-color: white;
+   font-size: 12px;
+   margin: 8px;
+}
+
+tt, code, pre {
+   font-family: 'DejaVu Sans Mono', 'Droid Sans Mono', 'Lucida Console', Consolas, Monaco, monospace;
+}
+
+h1 { 
+   font-size:2.2em; 
+}
+
+h2 { 
+   font-size:1.8em; 
+}
+
+h3 { 
+   font-size:1.4em; 
+}
+
+h4 { 
+   font-size:1.0em; 
+}
+
+h5 { 
+   font-size:0.9em; 
+}
+
+h6 { 
+   font-size:0.8em; 
+}
+
+a:visited {
+   color: rgb(50%, 0%, 50%);
+}
+
+pre {	
+   margin-top: 0;
+   max-width: 95%;
+   border: 1px solid #ccc;
+   white-space: pre-wrap;
+}
+
+pre code {
+   display: block; padding: 0.5em;
+}
+
+code.r, code.cpp {
+   background-color: #F8F8F8;
+}
+
+table, td, th {
+  border: none;
+}
+
+blockquote {
+   color:#666666;
+   margin:0;
+   padding-left: 1em;
+   border-left: 0.5em #EEE solid;
+}
+
+hr {
+   height: 0px;
+   border-bottom: none;
+   border-top-width: thin;
+   border-top-style: dotted;
+   border-top-color: #999999;
+}
+
+@media print {
+   * { 
+      background: transparent !important; 
+      color: black !important; 
+      filter:none !important; 
+      -ms-filter: none !important; 
+   }
+
+   body { 
+      font-size:12pt; 
+      max-width:100%; 
+   }
+       
+   a, a:visited { 
+      text-decoration: underline; 
+   }
+
+   hr { 
+      visibility: hidden;
+      page-break-before: always;
+   }
+
+   pre, blockquote { 
+      padding-right: 1em; 
+      page-break-inside: avoid; 
+   }
+
+   tr, img { 
+      page-break-inside: avoid; 
+   }
+
+   img { 
+      max-width: 100% !important; 
+   }
+
+   @page :left { 
+      margin: 15mm 20mm 15mm 10mm; 
+   }
+     
+   @page :right { 
+      margin: 15mm 10mm 15mm 20mm; 
+   }
+
+   p, h2, h3 { 
+      orphans: 3; widows: 3; 
+   }
+
+   h2, h3 { 
+      page-break-after: avoid; 
+   }
+}
+
+</style>
+
+
+
+
 
 </head>
-<body style="opacity: 0">
-  <slides class="layout-widescreen">
-    
-    <!-- LOGO SLIDE -->
-        <slide class="title-slide segue nobackground">
-  <hgroup class="auto-fadein">
-    <h1>Effect of Diet on Weight</h1>
-    <h2>Coursera Developing Data Products</h2>
-    <p>Andy Chu<br/></p>
-  </hgroup>
-  <article></article>  
-</slide>
-    
 
-    <!-- SLIDES -->
-    <slide class="class" id="id" style="background:;">
-  <hgroup>
-    <h2>What do you feed to chicks to maximize their growth?</h2>
-  </hgroup>
-  <article data-timings="">
-    <p>Somebody did an experiment to find out!</p>
+<body>
+<h2>install.packages(&ldquo;knitr&rdquo;)</h2>
+
+<p>title       : Effect of Diet on Weight
+subtitle    : Coursera Developing Data Products</p>
+
+<h2>What do you feed to chicks to maximize their growth?</h2>
+
+<p>Somebody did an experiment to find out!</p>
 
 <p>We&#39;ve collected data with daily measurements of groups of chicks raised on 4 different diets.</p>
 
 <p>However, how do we find out which diet was best from the resulting measurments?</p>
 
-  </article>
-  <!-- Presenter Notes -->
-</slide>
+<hr/>
 
-<slide class="" id="slide-2" style="background:;">
-  <hgroup>
-    <h2>Making sense of our measurements</h2>
-  </hgroup>
-  <article data-timings="">
-    <p>It is difficult to determine which diet is best when looking at the weights of all the chicks at 20 days old.</p>
+<h2>Making sense of our measurements</h2>
 
-<p><img src="assets/fig/unnamed-chunk-1.png" title="plot of chunk unnamed-chunk-1" alt="plot of chunk unnamed-chunk-1" style="display: block; margin: auto;" /></p>
+<p>It is difficult to determine which diet is best when looking at the weights of all the chicks at 20 days old.</p>
+
+<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA/AAAAEgCAMAAAAkIGg6AAAApVBMVEX9/v0AAAAAADkAAGUAOTkAOY8AZrU5AAA5ADk5AGU5OTk5OWU5OY85ZmU5ZrU5j9plAABlADllOTllOY9lZgBlZjllZrVlj9pltf2POQCPOTmPOWWPZmWPZo+Pj4+Pj9qPtY+P29qP2/21ZgC1Zjm1ZmW1tWW124+1/v2+vr7ajznaj2XatWXa24/a2/3a/rXa/tra/v39tWX924/9/rX9/tr9/v3nlkFRAAAAN3RSTlP///////////////////////////////////////////////////////////////////////8AEFmdiwAAAAlwSFlzAAALEgAACxIB0t1+/AAAEvhJREFUeJztnYt647YVBiNvbSdNGjnd1PU2vaT2bmsrbTe2ZL3/o5WSnTVFgARAgAAOzky/Jg5EAfhJjATx+tUeANTwVekOAEA+EB5AEQgPoAiEB1AEwgMoAuEBFIHwAIpAeABFIDyAIhAeQBEID6AIhAdQBMIDKALhARSB8ACKQHgAReQR/mnVcbPffn37WvDx5Y+3gtclTnn+sFpd7Peb1WqdpZuLYM/+Gq2/xCkNZ9/fvcVVl70LV3S7ZxL+3X0vefffZ8e/t5dntyNLHNm8u99d3XTFxiuCsGd/iWZf4kjD2bt/Hl6wLnGk4ewHlS9Glnh5eeHs+YR//rA+ZOg+3dfdp9gh/fbrn7++PV1id7Vanf/6Yb2/e10rXfinnhsCsWffH6OdLKEp+6YvvKrs229+vDhdIm/2nMJfdOFfPsB++7TbDoQ/JO5e25x/fk17KNqcP8rf8Gb23tROXfbNmdbt/vzh5q7ods/9DX93+N2yHhN+ffgwPLvd/fDzN8dvgN3V+viS/A1vZD9GO1lCT3ZzdqMm++ZiPxA+c/asv+EPn3bnj/u33zOnwh/Wzfnj4bW73x9XyosUbfyWG2Tv+a4ue/eNt7083X+hJfthl1w3gX/sL5E3e+699IfE54+/7a07hHoJ9rpE96/fXR7+dRwPdy+Freyt7Wd/iaYz++HvtdLt3tF9wxfMXsFx+I/mJ9mXnbitQ/YTyL445YXffm8UbSR/sodA9hPIvjzlhQeAbCA8gCIQHkARCA+gCIQHUATCAygC4QEUgfAAikB4gCPHk1ov3MvJBuEBDuzeP+73zz+1fm4vwgMcQHgATTClT8/qC1mbTcNqQOn+SKTmdVid8MOVlWR1ZRb+4ZWqtrQnXzovN4KTpQd9xeuwvin9YGWlWV0I703FgzUViw/6itfhSfYqph8IX5aKB2sqNAtvzG6Kdw7hy1LzYE2F4in9frP6w2X/uRDFO4fwZal5sCai+4bfmA9DSUjF67DL/vF2/+ltdlO8cwifh7FvuYoHayp27z9f7/uDPjUVr8PjzxmET4sE4Ud/x1Y8WFNxIvwSO65qXoebdfdh37uxXPHOIXwWNAt/fNrfkoNe0jos3jmEz4PiKf3iO64krcPinUP4PCgWfvEdV5LWYfHOIXwWNE/pF99xJWkdFu8cwmdh9IwrSYN1LkvvuJK0Dot3DuHzMHbGlaTBmgqEL9kBhM/C2I4rSYM1FQhfsgMIn4PRHVeSBmsqEL5kBxA+B6M7riQN1lQgfMkOIHwWxnZcSRqsqUD4kh1A+CIgfML6BK3D4p1D+DIg/Ox3G3dokrQOi3cO4U+qynZfNISf/W5jjUlah8U7l1P4hW6EkFL4bIMG4We/G+GjOpBP+KVudYTwwkD4kh1A+GWqcrU0bFHAYE0Fwo+8tsQdpI1G8gnPlL7f0rBFAYM1FQg/8toSLmZpZPQbfpF7myF8SnJ8ycS9G+GjOpBT+GXubYbwKcnQIYQfea0q4UN+X3gIn/DbA+FTgvCLIkj4gM6M/IZf6N5mCJ+SBTqU9mEMCB/XgYzCb1bv7vt76RG+wsGavkPG0RlNwod82LUmfLfhdz/8E+FfWhq2WMtgRfiUBGVvUPj981++RfhjS8MWaxmsTOlTolr4/abb6NtvEP7Y0rDFWgYrwidF85TerDK0syPVIHxCmNKnxDj3BOHjQfiULCx8/OFYYcIPzj1B+HgQPiVM6VMSdO4JwntWg/AJWaBDaR81JUr4oHNPEN6zGgnCL31f+mSnwC8ypU/5qKmswkev1pBzTxDesxoBwo/uuEomfKqhstBveKnCR1YddO4JwntWg/BVCx/wqCmfL1Rpwvufe4LwntUIEH75KX3FwhtNRDUuSvigc08Q3rOadOtnyW94+/FYhA9tXJbwRoX+jSH8WDUJN8dSq3r0eCzChzaO8HEd8G0E4WMYPR6L8KGNI3xcB3wbQfgoxo7HInxo4wgf1wHfRhA+irHjsQgf2ngy4ecdEogE4eORIPzo8ViED208nfCzGoukSuGN29etLAsWEd76cSxEePvxWIQPbRzh4zpgacTacB3C21qXIPzo8ViED20c4e1v9jwLGOGd9S8Cws9tHOG93ozws+tfBISf2zjCe70Z4WfXvwgIP7dxhPd6M8LPrn8RMgg/79JOhA9dJgiEDwLhR+tzbjGET9JYJAgfBMKP1ufcYgifpLFIVAnvvreZa/6J8KP1ObcYwidpLBJNwnvcrtglHMKP1ufcYuWE97+JJcLPbg7h54DwCwgfcF96hJ/dXIXC+0zpHbUj/Gh9zi2G8EkaiwTh7b1B+ND6nFuMKX2SxiLRJDxT+n5LwxYj261Y+IDHLSH87OZqF96+Kx7hZ9fn3GIFhfd+3BLCz27O5qftstcapvRv3UH42fU5t1gdwk+f81dYeKce4Wsj29NjrcJbKswpvOuuLyfC+1/6jvD2emoRPuBxS6WFT1X1F/I9H75C4Z13fTkV3tYQwo/W59xi5YT3f9wSws9urk7hp+/6klN4+zl9CL/MTjvfxy01J7zyKb3jri9Zhbe+CeGXEd73cUsIP7u5GoU3+jjoK8JnF36B3VQm/o9bak541VN6s4+DvrYsfIFny2W1J6ivISmW63J24V13JUB4oyGxwpd4eizCO7rhUdFiU3rLEXK7i7YFPdIg/Nj6QfjJjb+k8PN+T8gS3vMBJGF++nxaIPygbeubmNJnFX5W46KE930AyTJ+IrzrTQiP8EnXhu8DSBC+MeGZ0vcbjWpclPC+DyBB+GWE7/3ssb4pj/D9fS8IH9q4LOE9syP8QsJ/WZQp/cjb2hDeZ9c2wgdXOAbCGxR4XLRq4RNVhPBe2RF+SInHRSN8fEUI75Ud4YeUeFw0wsdXhPBe2RHeoMDjohE+viKE98qO8O6eDFuMbBfhF8mO8F7ZEd7dk2GLke0i/CLZEd4rO8K7ezJsMbJdhF8kO8J7ZUd4d0+GLUa2W7Pw/ucgILyjAzULv7tard7dTyzVsPDh2WPb9Rr0PpenRXfIyB5wWrF04Wdv9waE3xyC767WE4s1K/yM7LHt+gk/qyQMM7se4edvd/nC7/5+dfwS+W7i865V4edkj223FuFt2bVM6SO2u3zh989/e+z+/+tPCoWfkz223VqEt2XXInzEdm9A+OO5ZT/df9Io/Izsse1WI7yZXc+Ufv52ly/87h9P3cf6zdNZvPC9nUz91x1XutpbfKvU+qZEU/oZ2WPbrUV4S/aAS4NlCx+x3eULb9uB4ZrajQlvK3S6a1/djjcl+oZnp13Qdg9rvF7hVe+0m3N4phnhqz0sN6skEDO7/6XBwoVXfVjOsjb0CO+mXeENAi4Nli68G03C65nSexAi/Lzbt9QkvO+lwQjv6EDFwu+u918eCv5Ct+E3q9XNePhmhDezmz0ZtjjR7sxlyghvye5/abBw4edvd/nCPx2/i84f+6vj/efrk/XRqvCW7GZPhi1OtCtJ+LjssoW3ZffcYSlf+JdPuxNOhLcdnmlFeEt2syfDFifalSR8XHbZwlvHvN85CA0Ib2F7eXZ71ztm0azwHkwMeo8rXCaSjW6xYr/hQ7LPSlqN8CaKhD8coUhztZw84WdkH1370oRPnN0naTXCW7KrmdIfsw+Oww+LWhXekj3q5BNJwtuyG30NyO6TtBbhbWPetaN6otOyhLfxPLiqQIjw08fD/Ig6n1yS8D60KrwF547qiU4LE/7l467/4Wau8UH4WoX3r/8VM7tk4X1OA5jKbvY1ILtP0mqEt213x47qiU4LEz7d5bHyhE98iWhp4T2an8xu9DUgu0/SaoS3ZHftqJ7otDDh010eK0946yWiXr/l5AsfdWmwcOE1Xx77chrCzdPFxGLNCm9m9/0tJ1/4Gds9Nmk1wlu2u2tH9USnZQm/++NlK4flgoW3ZPf9LSde+DnbPTZpLcLbsrt2VE90WpbwPrQqvA3P33LihfehiPA+5zOVy47wpYXvjYwkwruyj659hHcmbSB7C8JvVheTv+QqF97aqC9Gdt/fcg0IH77dY5M2kL0B4XfXu+vASwWbEd6S3fO3nHzhZ2z32KQNZG9A+O7TbrWaurtXw8LPyD669qUJnzi7T9IGsrcgvJt2hQ/PPrr2xQlvUsVNLAtlN3pvTyFf+MOP1unbILQr/Jzso2tfmPCW7HXcl75MdrP39hTyhT+wvcx9HN51wne+b/jQ7KNrX5jwluxx1xHMOppWTXZzO9mztyD8xnH6xSLCO3qXS/jw7KNrX5zwZva01xHULPzs7S5f+Onb8dvDtyL8nOyja1+Y8Jbsia8jqFf4iO0uX/iKvuGt59DwDZ/tWy7xdQT1Cq/6G/64pa+y/4a39c71JuuiccKHZx9d++KEN7Invo6gZuFnb3f5wrsfutOu8HOyj659YcLbsqe9jqBe4SO2u3zhfWhV+DnZR9e+MOGXz16v8BHZEb5O4RPc3W4k++jaly984usIEB7hba/3mnG8ybrodKMIH0La6wgQHuFtr/eacbzJuijCBzWfMTvCI7zt9V4zjjdZF0X4oOYzZkd4McIv/7hohO8tI23QI/yDWShZeOc51QiP8Ik6KC07wiP8VImlPnMZaYMe4R/MQsnCM6XvtzRscWztI/ycDkrLjvAIP1Viqc9cRtqgb1J4NU+PtcCUvt/SsMWxtY/wczpYS3ZFz4d3hLddRJFUeOttphE+SUnR7AgvRfi8U3r/SnssJ7yah0l6oEh41VN6A0XCi35ctEfzQSC8DuGdF1EgPMIn6mAt2XVP6V0XUTQsPFP6fl+jsssVfuLmH20K79rwCI/wiTpYTXbNU3qDSoR33fMuhfBM6ft9jcouS3jP7AifU/g5lQbiO7VD+DQdrCW7780/EL4x4VVP6fXcl97E8+YfCN+a8K7sbxU3J3zinzOyhDe2kz07wjcmvKLnw5vZEb63nezZEb4x4fU8H96C5im9sZ3s2RG+NeFd2d8qRvgEHawmu7Gd7NkRHuGnSiz1mcvUMuiZ0ve3kz07wiP8VImlPnOZWgZ94kOSCI/wU68jfFjVCwx6pvTO7AiP8FMllvrMZaQNeoR/MAsRPvR1hA+rOv2g51FT/e1kz47wCD9VYqnPXKaaQc+jppzZER7hp0os9ZnLSBv0CP9gFiJ86OsIH1Y1wpfIjvAIP1Viqc9cRtqgR/gHsxDhQ19vUvjVgCYGPcI/mIUIH/p6m8J7lIgb9JqzIzzCx5aIG/SasyM8wseWiBv0mrMjPMLHlogb9JqzIzzCx5aIG/SasyM8wseWiBv0mrMjPMLHlogb9JqzIzzCx5aIG/Sas7cpfKVPj0X44KrJnjh7k8I7b3WE8KoHfZPZNT9qCuF7aBr0irPrfnqs5ik9t3lSmV218F34zWp18xrYcjPDhoXnzq09NGXXPaX/fL3ff1I5pUf4HoqyO7/kJjqN8IKFZ0rfQ1F255if6LR44ffby7Pbu/X4hm9YeN9P+hYHveYPO93CD1ElvN+Gb3PQK/454/qSm+g0wiN8SEk1g1618EMQvld1w8L7ftI3OegVT+kNEL5XdcvCu7K/VdzcoFe9/8JzuyM8wseWVDPoNf+cMUD4XtUI3+SgR/geCN+rGuHbHPSa918MQfhe1QivetBrzo7wCB9bIm7Qa86O8AgfWyJu0GvOjvAIH1sibtBrzo7wCB9bIm7Qa86O8AgfWyJu0GvOjvAIH1sibtBrzo7wCB9bIm7Qa86O8AgfWyJu0GvOjvAIH1sibtBrzo7wCB9bIm7Qa86O8AgfWyJu0GvOjvAIH1sibtBrzo7wCB9bIm7Qa86O8AgfWyJu0GvOjvAIH1sibtBrzo7wCB9bIm7Qa86O8AgfWyJu0GvOjvAIH1sibtBrzo7wCB9bIm7Qa86O8AgfWyJu0GvO3qbwrieQtCy85qevkN2ZvUnhnc8Ya1h4zc9XI7s7e/vCnzxy6Dfe/ur/aS30f32ZSmM2fL8Go7VkJUtWTfbU2W2dtnVgrCxPhWN4Tuk1QfbSvSiDjuyeO+0AoAUQHkARCA+gCIQHUATCAygC4QEUgfAAikB4AEUgPIAiEB5AEQgPoAiEB1AEwgMoAuEBFIHwAIpAeABFIDyAIhAeQBEID6AIhAdQBMIDKALhARSB8ACKQHgARSA8gCIQHkARCA+gCIQHUATCAygC4QEUgfAAiigq/ObwPO5fbvf7p/XhPz/dl+xMZshO9n2B7CWF337f5V//8qfVzdN6d7W6+fSv8/+szm4L9igfZCd7kewlhd/cHP+5fur+t7nZfv/x2/uPt8//K9ijfJCd7EWylxf+l9vtn5/Wh6nN3bv77eXqpmCP8kF2shfJXnRK/93jYXpzDL+52b3/64/rj7e764I9ygfZyV4kew077Q7hj79n/v3df7V80pOd7EWyc1gOQBEID6AIhAdQBMIDKALhARSB8ACKQHgARSA8gCIQHkARCA+gCIQHUATCAyji/2zVOyZ6KRA7AAAAAElFTkSuQmCC" title="plot of chunk unnamed-chunk-1" alt="plot of chunk unnamed-chunk-1" style="display: block; margin: auto;" /></p>
 
 <p>What about on different days? Is one diet better than another when looking at different timelines?</p>
 
-  </article>
-  <!-- Presenter Notes -->
-</slide>
+<hr/>
 
-<slide class="" id="slide-3" style="background:;">
-  <hgroup>
-    <h2>This tool allows you to make an informed decision!</h2>
-  </hgroup>
-  <article data-timings="">
-    <p>You can compare between diets, and even check the weights at different days</p>
+<h2>This tool allows you to make an informed decision!</h2>
 
-<p><img src="assets/fig/unnamed-chunk-2.png" title="plot of chunk unnamed-chunk-2" alt="plot of chunk unnamed-chunk-2" style="display: block; margin: auto;" />
+<p>You can compare between diets, and even check the weights at different days</p>
+
+<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA/AAAAGwCAMAAAA5Rn55AAAAqFBMVEX9/v0AAAAAADkAAGUAOTkAOY8AZo8AZrU5AAA5ADk5AGU5OQA5OTk5OWU5OY85ZmU5ZrU5j485j9plAABlADllAGVlOQBlOY9lZjllZmVlZrVlj49ltbVltdpltf2POQCPOTmPOWWPjzmPj2WPtY+P27WP29qP2/21ZgC1ZmW1tWW124+1/rW1/v3ajzna24/a/rXa/tra/v39tWX924/9/rX9/tr9/v26QRxxAAAAOHRSTlP/////////////////////////////////////////////////////////////////////////ADtcEcoAAAAJcEhZcwAACxIAAAsSAdLdfvwAABrLSURBVHic7Z0Ne+M2dkZXnnjlTdvZVE7abru1J+l2rGYzamp98P//sxL8EiVRMkFcChe45zxPxopMAyBfHn6AEPSHAgDM8IfYDQCA+4HwAIZAeABDIDyAIRAewBAID2AIhAcwBMIDGALhAQyB8ACGQHgAQyA8gCEQHsAQCA9gCIQHMATCAxhifuH3z4vFYlUUh9dP35o3mhenrw+vD29FsV48vpfvlv9cLtEro1zw5aye7o31YtH8eVX1YnG+5ED7uj+5VvqIEl7OGnssxS2wvF1CXf2HJbmXH6yPBmJk7pY6vHYbmuyHmV34bbUa5Tr3gjvSXze3NuVal7vA9tomOpZxserdG+u6urr0uvLVrQa2C/VT99uw16ppS3G74e3Uz0K/WlJRbU/1wsfJvFyM7D9kbuHLFS7XYFNGWgb39yeXShW42xDN6/JltRrbcsnd0388vZSLV39zPNyVi3z6rdwwbRnVZqy3otu5XOHtG275dpeqf25dRe1i1UtXT31K6Baq/63rrAr7o1vUNaQKZNOeLJoXZUG/npXgqrkopWrS7unx3f3Xa2+vALfcX7vQb5dUVA3XLnyEzKv/e9k9kf1HzC18vbKH16bprvFN4NUx2b3eNGvhFt0+/PfzqliXW2XdHO66pb97cuHXZfSzro7Q/9e9se0dIpvwy2Nks9i7q6ssvf3f40JVtE2ddenVomWZrsC2Md2LbmXOq2lPM20pbVPaZrU1dwU0L/ptuVFSua/8ol74u2deVVgWUF0luIIKsr/G3MIf/auO+y4atz7u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" title="plot of chunk unnamed-chunk-2" alt="plot of chunk unnamed-chunk-2" style="display: block; margin: auto;" />
 Diet 4 yields significantly bigger chicks as of 6 days of age, but by 20 days, that difference is gone!</p>
 
-  </article>
-  <!-- Presenter Notes -->
-</slide>
+<hr/>
 
-<slide class="" id="slide-4" style="background:;">
-  <hgroup>
-    <h2>Conclusion</h2>
-  </hgroup>
-  <article data-timings="">
-    <p>Explore the comparisons between different diets on different days yourself!</p>
+<h2>Conclusion</h2>
 
-<p>Go to <a href="http://courseraandy.shinyapps.io/shiny/">http://courseraandy.shinyapps.io/shiny/</a> right now!</p>
+<p>Explore the comparisons between different diets on different days yourself!</p>
 
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-    <slide class="backdrop"></slide>
-  </slides>
-  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
-    <ul>
-      <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=1 title='What do you feed to chicks to maximize their growth?'>
-         1
-      </a>
-    </li>
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=2 title='Making sense of our measurements'>
-         2
-      </a>
-    </li>
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=3 title='This tool allows you to make an informed decision!'>
-         3
-      </a>
-    </li>
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=4 title='Conclusion'>
-         4
-      </a>
-    </li>
-  </ul>
-  </div>  <!--[if IE]>
-    <script 
-      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
-    </script>
-    <script>CFInstall.check({mode: 'overlay'});</script>
-  <![endif]-->
 </body>
-  <!-- Load Javascripts for Widgets -->
-  
-  <!-- LOAD HIGHLIGHTER JS FILES -->
-  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script>
-  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
-   
-  </html>
+
+</html>
+

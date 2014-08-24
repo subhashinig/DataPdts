@@ -1,16 +1,6 @@
 ---
 title       : Effect of Diet on Weight
 subtitle    : Coursera Developing Data Products
-author      : Andy Chu
-job         : 
-framework   : io2012   # {io2012, html5slides, shower, dzslides, ...}
-highlighter : highlight.js  # {highlight.js, prettify, highlight}
-hitheme     : tomorrow
-widgets     : []            # {mathjax, quiz, bootstrap}
-mode        : selfcontained # {standalone, draft}
-knit        : slidify::knit2slides
-
---- .class #id
 
 ## What do you feed to chicks to maximize their growth?
 
