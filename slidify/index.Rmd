@@ -1,0 +1,68 @@
+---
+title       : Effect of Diet on Weight
+subtitle    : Coursera Developing Data Products
+author      : Andy Chu
+job         : 
+framework   : io2012   # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+
+--- .class #id
+
+## What do you feed to chicks to maximize their growth?
+
+Somebody did an experiment to find out!
+
+We've collected data with daily measurements of groups of chicks raised on 4 different diets.
+
+However, how do we find out which diet was best from the resulting measurments?
+
+---
+
+## Making sense of our measurements
+
+It is difficult to determine which diet is best when looking at the weights of all the chicks at 20 days old.
+
+```{r fig.height=4, fig.width=14, fig.align="center", echo=F}
+par(mfrow=c(1,4))
+barplot(ChickWeight[ChickWeight$Diet==1 & ChickWeight$Time==20,"weight"],main="Diet 1, Day 20", xlab="Chicks", ylab="Weight (g)")
+barplot(ChickWeight[ChickWeight$Diet==2 & ChickWeight$Time==20,"weight"],main="Diet 2, Day 20", xlab="Chicks", ylab="Weight (g)")
+barplot(ChickWeight[ChickWeight$Diet==3 & ChickWeight$Time==20,"weight"],main="Diet 3, Day 20", xlab="Chicks", ylab="Weight (g)")
+barplot(ChickWeight[ChickWeight$Diet==4 & ChickWeight$Time==20,"weight"],main="Diet 4, Day 20", xlab="Chicks", ylab="Weight (g)")
+
+```
+
+What about on different days? Is one diet better than another when looking at different timelines?
+
+---
+
+## This tool allows you to make an informed decision! 
+
+You can compare between diets, and even check the weights at different days
+
+```{r fig.height=6, fig.width=14, fig.align="center", echo=F}
+par(mfrow=c(1,2))
+weight1 = ChickWeight[ChickWeight$Time==6 & ChickWeight$Diet == 3,"weight"]
+weight2 = ChickWeight[ChickWeight$Time==6 & ChickWeight$Diet == 4,"weight"]
+pval = sprintf("%.3f", wilcox.test(weight1, weight2, exact=FALSE)$p.value)
+
+boxplot(weight1, weight2, xlab="Diet", ylab="Weight (g)", names=c(3, 4), main = paste0("Chick Weight at 6 Days Between Diet 3 and Diet 4\n2 sided Wilcoxon p-value =",pval))
+
+weight1 = ChickWeight[ChickWeight$Time==20 & ChickWeight$Diet == 3,"weight"]
+weight2 = ChickWeight[ChickWeight$Time==20 & ChickWeight$Diet == 4,"weight"]
+pval = sprintf("%.3f", wilcox.test(weight1, weight2, exact=FALSE)$p.value)
+
+boxplot(weight1, weight2, xlab="Diet", ylab="Weight (g)", names=c(3, 4), main = paste0("Chick Weight at 20 Days Between Diet 3 and Diet 4\n2 sided Wilcoxon p-value =",pval))
+```
+Diet 4 yields significantly bigger chicks as of 6 days of age, but by 20 days, that difference is gone!
+
+---
+
+## Conclusion
+
+Explore the comparisons between different diets on different days yourself!
+
+Go to http://courseraandy.shinyapps.io/shiny/ right now!
